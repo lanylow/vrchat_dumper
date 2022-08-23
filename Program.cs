@@ -22,6 +22,12 @@ namespace vrchat_dumper
                         definition.Methods.Any(method => method.Name.Contains("Awake"));
                 } 
             },
+            { "PlayerManager", delegate(TypeDefinition definition)
+                {
+                    return
+                        definition.Methods.Any(method => method.Name.Contains("OnPlayerDisconnected"));
+                }
+            },
             {
                 "Player", delegate(TypeDefinition definition)
                 {
